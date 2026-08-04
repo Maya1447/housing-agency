@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imperial Housing Agent</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{background:#F8F6F2;color:#333}
+header{background:#111;padding:25px 40px;border-bottom:4px solid #D4AF37}
+.brand{display:flex;justify-content:center;align-items:center;gap:25px}
+.logo img{width:170px;height:170px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.45));animation:floatLogo 4s ease-in-out infinite;transition:.4s}
+.logo img:hover{transform:scale(1.08) rotate(-2deg)}
+.brand-text h1{font-family:'Cinzel',serif;font-size:3.5rem;color:#D4AF37;letter-spacing:5px;text-shadow:2px 2px 5px rgba(0,0,0,.6)}
+.brand-text p{color:#ddd;font-style:italic;margin-top:8px}
+
+nav{background:#222;border-bottom:2px solid #D4AF37;box-shadow:0 3px 12px rgba(0,0,0,.25)}
+nav ul{display:flex;justify-content:center;list-style:none}
+nav li{opacity:0;animation:navFade .8s ease forwards}
+nav li:nth-child(1){animation-delay:.2s}
+nav li:nth-child(2){animation-delay:.4s}
+nav li:nth-child(3){animation-delay:.6s}
+nav li:nth-child(4){animation-delay:.8s}
+nav li:nth-child(5){animation-delay:1s}
+nav li:nth-child(6){animation-delay:1.2s}
+nav li:nth-child(7){animation-delay:1.4s}
+nav a{display:block;padding:18px 24px;color:#fff;text-decoration:none;font-weight:600;position:relative;transition:.35s}
+nav a::after{content:'';position:absolute;left:50%;bottom:8px;width:0;height:3px;background:#D4AF37;border-radius:5px;transform:translateX(-50%);transition:.35s}
+nav a:hover{color:#D4AF37;transform:translateY(-6px);text-shadow:0 0 8px rgba(212,175,55,.8)}
+nav a:hover::after{width:80%}
+nav a.active{color:#D4AF37;animation:pulse 2s infinite}
+nav a.active::after{width:80%}
+
+main{max-width:900px;margin:60px auto;padding:20px;text-align:center}
+main h2{font-family:'Cinzel',serif;font-size:2.4rem;margin-bottom:20px}
+main p{font-size:18px;line-height:1.8;margin-bottom:18px}
+
+footer{position:fixed;bottom:0;width:100%;background:#111;color:#fff;border-top:4px solid #D4AF37;text-align:center;padding:18px}
+
+@keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes navFade{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{text-shadow:none}50%{text-shadow:0 0 10px rgba(212,175,55,.9),0 0 20px rgba(212,175,55,.4)}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="brand">
+<div class="logo"><img src="logo.png.png" alt="Company Logo"></div>
+<div class="brand-text">
+<h1>Imperial Housing Agent</h1>
+<p>Your Trusted Partner in Real Estate</p>
+</div>
+</div>
+</header>
+<nav>
+
+<ul>
+
+<li><a href="Home .html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="location.html">Location</a></li>
+
+<li><a href="houses.html">Houses</a></li>
+
+<li><a href=" Methods of payment.html">Methods of Payment</a></li>
+
+<li><a href="Contact Us.html">Contact Us</a></li>
+
+<li><a href="Enquiry Form.html">Enquiry Form</a></li>
+
+</ul>
+
+</nav>
+
+<main>
+<h2>Welcome to Imperial Housing Agent</h2>
+<p>At Imperial Housing Agent, we connect clients with quality homes and investment opportunities through professional, transparent, and reliable real estate services.</p>
+<p>Whether you are buying, renting, selling, or investing, our experienced team is committed to helping you make informed property decisions with confidence.</p>
+</main>
+
+<footer>&copy; 2026 Imperial Housing Agent. All Rights Reserved.</footer>
+
+</body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Houses | Imperial Housing Agent</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f6f8;
+}
+header{
+
+background:#0F172A;
+
+padding:20px;
+
+border-bottom:5px solid #F4C542;
+
+}
+
+.brand{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+.logo img{
+
+width:140px;
+
+height:140px;
+
+object-fit:contain;
+
+}
+
+.brand-text h1{
+
+font-family:'Cinzel',serif;
+
+font-size:45px;
+
+color:#F4C542;
+
+}
+
+.brand-text p{
+
+color:white;
+
+font-size:18px;
+
+}
+
+/*==========================
+NAVIGATION
+===========================*/
+
+nav{
+
+background:#1E293B;
+
+}
+
+nav ul{
+
+display:flex;
+
+justify-content:center;
+
+list-style:none;
+
+}
+
+nav ul li{
+
+position:relative;
+
+}
+
+nav ul li a{
+
+display:block;
+
+padding:18px 25px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+nav ul li:hover{
+
+animation:swing .5s ease;
+
+}
+
+nav ul li a:hover{
+
+background:#F4C542;
+
+color:#111;
+
+}
+
+.active{
+
+background:#F4C542;
+
+color:#111;
+
+}
+
+@keyframes swing{
+
+20%{transform:rotate(8deg);}
+40%{transform:rotate(-8deg);}
+60%{transform:rotate(5deg);}
+80%{transform:rotate(-5deg);}
+100%{transform:rotate(0deg);}
+
+}
+
+/*==========================
+PAGE TITLE
+===========================*/
+
+.title{
+
+text-align:center;
+
+padding:50px 20px;
+
+}
+
+.title h2{
+
+font-family:'Cinzel',serif;
+
+font-size:42px;
+
+color:#0F172A;
+
+margin-bottom:10px;
+
+}
+
+.title p{
+
+font-size:18px;
+
+color:#666;
+
+}
+
+/*==========================
+PROPERTY GRID
+===========================*/
+
+.properties{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+padding:20px 50px;
+
+}
+
+/*==========================
+PROPERTY CARD
+===========================*/
+
+.card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.image{
+
+height:230px;
+
+background:#ececec;
+
+overflow:hidden;
+
+border-bottom:4px solid #F4C542;
+
+}
+
+.image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.details{
+
+padding:20px;
+
+}
+
+.details h3{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+color:#0F172A;
+
+}
+
+.details p{
+
+margin-bottom:10px;
+
+font-size:17px;
+
+color:#555;
+
+}
+
+/*==========================
+PRICE BOX
+===========================*/
+
+.price{
+
+width:80%;
+
+margin:20px auto;
+
+padding:15px;
+
+text-align:center;
+
+background:linear-gradient(135deg,#C59D1C,#F4C542,#FFE28A);
+
+font-size:22px;
+
+font-weight:bold;
+
+border-radius:35px;
+
+box-shadow:0 6px 18px rgba(0,0,0,.25);
+
+}
+
+/*==========================
+SECTION TITLE
+===========================*/
+
+.section-title{
+
+text-align:center;
+
+font-family:'Cinzel',serif;
+
+font-size:40px;
+
+margin-top:70px;
+
+margin-bottom:25px;
+
+color:#0F172A;
+
+}
+
+footer{
+
+margin-top:60px;
+
+background:#0F172A;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+border-top:5px solid #F4C542;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+
+<div class="logo">
+
+<img src="logo.png.png" alt="Imperial Housing Agent Logo">
+
+</div>
+
+<div class="brand-text">
+
+<h1>Imperial Housing Agent</h1>
+
+<p>Your Trusted Partner in Real Estate</p>
+
+</div>
+
+</div>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="location.html">Location</a></li>
+
+<li><a class="active" href="houses.html">Houses</a></li>
+
+<li><a href="payment.html">Methods of Payment</a></li>
+
+<li><a href="contact.html">Contact Us</a></li>
+
+<li><a href="enquiry.html">Enquiry Form</a></li>
+
+</ul>
+
+</nav>
+
+<div class="title">
+
+<h2>Available Houses</h2>
+
+<p>Browse our selection of quality homes across Kenya.</p>
+
+</div>
+
+<div class="properties">
+    <div class="properties"></div>
+    <!-- HOUSE 1 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE 3.PNG" alt="Luxury Villa">
+    </div>
+
+    <div class="details">
+
+        <h3>Luxury Villa</h3>
+
+        <p><strong>Location:</strong> Karen, Nairobi</p>
+
+        <p><strong>House Size:</strong> 3,500 Sq Ft</p>
+
+        <div class="price">
+            KSh 200,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 2 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE 4.PNG" alt="Modern Bungalow">
+    </div>
+
+    <div class="details">
+
+        <h3>Modern Bungalow</h3>
+
+        <p><strong>Location:</strong> Runda, Nairobi</p>
+
+        <p><strong>House Size:</strong> 3,000 Sq Ft</p>
+
+        <div class="price">
+            KSh 350,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 3 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSEC6.PNG" alt="Executive Maisonette">
+    </div>
+
+    <div class="details">
+
+        <h3>Executive Maisonette</h3>
+
+        <p><strong>Location:</strong> Kilimani, Nairobi</p>
+
+        <p><strong>House Size:</strong> 2,800 Sq Ft</p>
+
+        <div class="price">
+            KSh 500,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 4 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE 7.PNG" alt="Elegant Family Home">
+    </div>
+
+    <div class="details">
+
+        <h3>Elegant Family Home</h3>
+
+        <p><strong>Location:</strong> Lavington, Nairobi</p>
+
+        <p><strong>House Size:</strong> 4,000 Sq Ft</p>
+
+        <div class="price">
+            KSh 750,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 5 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE 8.PNG" alt="Classic Town House">
+    </div>
+
+    <div class="details">
+        <h3>Classic Town House</h3>
+        <p><strong>Location:</strong> Kileleshwa, Nairobi</p>
+        <p><strong>House Size:</strong> 2,600 Sq Ft</p>
+        <div class="price">
+            KSh 900,000
+        </div>
+    </div>
+</div>
+<!-- HOUSE 6 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE10.PNG" alt="Modern Family Residence">
+    </div>
+
+    <div class="details">
+
+        <h3>Modern Family Residence</h3>
+
+        <p><strong>Location:</strong> Syokimau, Machakos</p>
+
+        <p><strong>House Size:</strong> 3,100 Sq Ft</p>
+
+        <div class="price">
+            KSh 1,200,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 7 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE 11.PNG" alt="Executive Mansion">
+    </div>
+
+    <div class="details">
+
+        <h3>Executive Mansion</h3>
+
+        <p><strong>Location:</strong> Kitengela, Kajiado</p>
+
+        <p><strong>House Size:</strong> 4,500 Sq Ft</p>
+
+        <div class="price">
+            KSh 1,500,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 8 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="house8.jpg" alt="Luxury Bungalow">
+    </div>
+
+    <div class="details">
+
+        <h3>Luxury Bungalow</h3>
+
+        <p><strong>Location:</strong> Ruaka, Kiambu</p>
+
+        <p><strong>House Size:</strong> 3,250 Sq Ft</p>
+
+        <div class="price">
+            KSh 2,000,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 9 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE 12.PNG" alt="Executive Villa">
+    </div>
+
+    <div class="details">
+
+        <h3>Executive Villa</h3>
+
+        <p><strong>Location:</strong> Thindigua, Kiambu</p>
+
+        <p><strong>House Size:</strong> 4,800 Sq Ft</p>
+
+        <div class="price">
+            KSh 2,500,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 10 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE 13.PNG" alt="Beachside Residence">
+    </div>
+
+    <div class="details">
+
+        <h3>Beachside Residence</h3>
+
+        <p><strong>Location:</strong> Nyali, Mombasa</p>
+
+        <p><strong>House Size:</strong> 5,200 Sq Ft</p>
+
+        <div class="price">
+            KSh 3,000,000
+        </div>
+
+    </div>
+
+</div>
+<!-- HOUSE 11 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="HOUSE 14.PNG" alt="Ocean View Villa">
+    </div>
+
+    <div class="details">
+
+        <h3>Ocean View Villa</h3>
+
+        <p><strong>Location:</strong> Diani Beach, Kwale</p>
+
+        <p><strong>House Size:</strong> 5,800 Sq Ft</p>
+
+        <div class="price">
+            KSh 4,000,000
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOUSE 12 -->
+
+<div class="card">
+
+    <div class="image">
+        <img src="house 18.png" alt="Modern Executive Home">
+    </div>
+
+    <div class="details">
+
+        <h3>Modern Executive Home</h3>
+
+        <p><strong>Location:</strong> Milimani, Kisumu</p>
+
+        <p><strong>House Size:</strong> 4,300 Sq Ft</p>
+
+        <div class="price">
+            KSh 5,000,000
+        </div>
+
+    </div>
+</div>
+<div class="card">
+    <div class="image">
+        <img src="house 17.png" alt="Presidential Mansion">
+    </div>
+    <div class="details">
+        <h3>Presidential Mansion</h3>
+        <p><strong>Location:</strong> Elgon View, Eldoret</p>
+        <p><strong>House Size:</strong> 6,500 Sq Ft</p>
+        <div class="price">
+            KSh 6,000,000
+        </div>
+    </div>
+</div>
+</div>
+<h2 class="section-title">Featured Furnished Houses</h2>
+
+<div class="properties">
+
+<div class="card">
+
+    <div class="image">
+        <img src="furnished 1.png.crdownload" alt="Royal Luxury Villa">
+    </div>
+
+    <div class="details">
+
+        <h3>Royal Luxury Villa</h3>
+
+        <p><strong>Location:</strong> Karen, Nairobi</p>
+
+        <p><strong>House Size:</strong> 5,000 Sq Ft</p>
+
+        <div class="price">
+            KSh 2,800,000
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="image">
+        <img src="furnished 2.png" alt="Diamond Executive Home">
+    </div>
+
+    <div class="details">
+
+        <h3>Diamond Executive Home</h3>
+
+        <p><strong>Location:</strong> Runda, Nairobi</p>
+
+        <p><strong>House Size:</strong> 5,300 Sq Ft</p>
+
+        <div class="price">
+            KSh 3,500,000
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="image">
+        <img src="furnished3.png" alt="Beachfront Mansion">
+    </div>
+
+    <div class="details">
+
+        <h3>Beachfront Mansion</h3>
+        <p><strong>Location:</strong> Nyali, Mombasa</p>
+        <p><strong>House Size:</strong> 6,000 Sq Ft</p>
+        <div class="price">
+            KSh 4,200,000
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="image">
+        <img src="furnished4.png" alt="Prestige Smart Villa">
+    </div>
+    <div class="details">
+        <h3>Prestige Smart Villa</h3>
+        <p><strong>Location:</strong> Lavington, Nairobi</p>
+        <p><strong>House Size:</strong> 5,600 Sq Ft</p>
+        <div class="price">
+            KSh 5,000,000
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="image">
+        <img src="furnished 5.png" alt="Ocean Paradise Residence">
+    </div>
+    <div class="details">
+        <h3>Ocean Paradise Residence</h3>
+        <p><strong>Location:</strong> Diani Beach, Kwale</p>
+        <p><strong>House Size:</strong> 7,000 Sq Ft</p>
+        <div class="price">
+            KSh 6,000,000
+        </div>
+    </div>
+</div>
+</div>
+<footer>
+<p>&copy; 2026 Imperial Housing Agent. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
